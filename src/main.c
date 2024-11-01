@@ -6,7 +6,7 @@
 /*   By: hang <hang@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:25:12 by huaydin           #+#    #+#             */
-/*   Updated: 2024/11/01 17:21:31 by hang             ###   ########.fr       */
+/*   Updated: 2024/11/01 17:28:57 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,31 +30,28 @@ void	free_and_exit_with_message(t_stacks *s, char *msg)
 	exit(1);
 }
 
-static void	validate_arguments(int argc, char **argv)
+static void validate_arguments(int argc, char **argv)
 {
-	int	i;
-	int	j;
+    int i;
+    int j;
 
-	i = 0;
-	if (argc < 2) 
-		free_and_exit_with_message(NULL, "");
-	while (++i < argc)
-	{
-		j = 0;
-		if (!argv[i][0] || (argv[i][0] && argv[i][0] == ' '))
-			free_and_exit_with_message(NULL, "Error\n");
-		while (argv[i][j])
-		{
-			if ((!(ft_isdigit(argv[i][j])) && (argv[i][j] != ' ')
-			&& (argv[i][j] != '-' && argv[i][j] != '+' && argv[i][j] != ' '))
-			|| (argv[i][j] == '-' && argv[i][j + 1] == '\0')
-			|| (argv[i][j] == '+' && argv[i][j + 1] == '\0')
-			|| (argv[i][j] == '-' && argv[i][j + 1] == ' ')
-			|| (argv[i][j] == '+' && argv[i][j + 1] == ' '))
-				free_and_exit_with_message(NULL, "Error\n");
-			j++;
-		}
-	}
+    i = 0;
+    if (argc < 2)
+        free_and_exit_with_message(NULL, "");
+    while (++i < argc)
+    {
+        j = 0;
+        if (!argv[i][0] || (argv[i][0] && argv[i][0] == ' '))
+            free_and_exit_with_message(NULL, "Error\n");
+        while (argv[i][j] != '\0')
+        {
+            if ((!(ft_isdigit(argv[i][j])) && (argv[i][j] != ' ')
+            && (argv[i][j] != '-' && argv[i][j] != '+' && argv[i][j] != ' '))
+            || (argv[i][j] == '-' && argv[i][j + 1] == '\0'))
+                free_and_exit_with_message(NULL, "Error\n");
+            j++;
+        }
+    }
 }
 
 static void	join_args(int argc, char **argv, t_stacks *s)
