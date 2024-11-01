@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: huaydin <huaydin@student.42vienna.com>     +#+  +:+       +#+        */
+/*   By: hang <hang@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:25:12 by huaydin           #+#    #+#             */
-/*   Updated: 2023/08/30 19:22:29 by huaydin          ###   ########.fr       */
+/*   Updated: 2024/11/01 17:21:31 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ static void	validate_arguments(int argc, char **argv)
 	int	j;
 
 	i = 0;
-	if (argc < 2)
+	if (argc < 2) 
 		free_and_exit_with_message(NULL, "");
 	while (++i < argc)
 	{
 		j = 0;
 		if (!argv[i][0] || (argv[i][0] && argv[i][0] == ' '))
 			free_and_exit_with_message(NULL, "Error\n");
-		while (argv[i][j] != '\0')
+		while (argv[i][j])
 		{
 			if ((!(ft_isdigit(argv[i][j])) && (argv[i][j] != ' ')
 			&& (argv[i][j] != '-' && argv[i][j] != '+' && argv[i][j] != ' '))
