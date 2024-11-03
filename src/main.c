@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hang <hang@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: hang <hang@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:25:12 by huaydin           #+#    #+#             */
-/*   Updated: 2024/11/01 17:42:25 by hang             ###   ########.fr       */
+/*   Updated: 2024/11/03 19:27:02 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static void validate_arguments(int argc, char **argv)
     while (++i < argc)
     {
         j = 0;
-        if (!argv[i][0] || (argv[i][0] && argv[i][0] == ' '))
+        if (!argv[i][0] ||argv[i][0] == ' ')
             free_and_exit_with_message(NULL, "Error\n");
         while (argv[i][j])
         {
