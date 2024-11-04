@@ -6,13 +6,13 @@
 /*   By: hang <hang@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:25:30 by huaydin           #+#    #+#             */
-/*   Updated: 2024/11/04 14:55:52 by hang             ###   ########.fr       */
+/*   Updated: 2024/11/04 15:56:48 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	exit_if_sorted_or_has_duplicate(t_stacks *stack, int i)
+void	sorted_or_duplicate(t_stacks *stack, int i)
 {
 	int	j;
 

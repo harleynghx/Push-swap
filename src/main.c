@@ -6,7 +6,7 @@
 /*   By: hang <hang@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:25:12 by huaydin           #+#    #+#             */
-/*   Updated: 2024/11/03 19:27:02 by hang             ###   ########.fr       */
+/*   Updated: 2024/11/04 15:57:05 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ int	main(int argc, char **argv)
 		sort_four_to_five_elements(stack);
 	else
 		radix_sort(stack);
-	exit_if_sorted_or_has_duplicate(stack, 1);
+	sorted_or_duplicate(stack, 1);
 	free_and_exit_with_message(stack, "Error\n");
 	return (0);
 }
