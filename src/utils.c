@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hang <hang@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: hang <hang@student.42kl.edu.my>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/25 13:25:30 by huaydin           #+#    #+#             */
-/*   Updated: 2024/11/01 17:44:09 by hang             ###   ########.fr       */
+/*   Updated: 2024/11/04 14:55:52 by hang             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,10 +67,10 @@ void	initialize_stacks(int argc, char **argv, t_stacks *stack)
 			stack->a_size++;
 		i++;
 	}
-	stack->a = malloc(stack->a_size * sizeof * stack->a);
+	stack->a = malloc(stack->a_size * sizeof(*stack->a));
 	if (stack->a == NULL)
 		free_and_exit_with_message(stack, "Error\n");
-	stack->b = malloc(stack->a_size * sizeof * stack->b);
+	stack->b = malloc(stack->a_size * sizeof(*stack->b));
 	if (stack->b == NULL)
 		free_and_exit_with_message(stack, "Error\n");
 }
